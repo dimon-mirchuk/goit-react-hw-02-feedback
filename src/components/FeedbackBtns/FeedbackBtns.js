@@ -1,7 +1,14 @@
+import styles from "./FeedbackBtns.module.css";
+
 const FeedbackBtns = ({ feedback, onLeaveFeedback }) => {
   return (
     <li key={feedback}>
-      <button type="button" data-feedback={feedback} onClick={onLeaveFeedback}>
+      <button
+        type="button"
+        className={styles.button}
+        data-feedback={feedback}
+        onClick={onLeaveFeedback}
+      >
         {feedback}
       </button>
     </li>
